@@ -22,7 +22,9 @@
       }
     },
     updated() {
-      this.update()
+      if (this.$parent.options && this.$parent.options.isUpdate) {
+        this.update()
+      }
     },
     attached() {
       this.update()
